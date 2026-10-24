@@ -7,7 +7,7 @@ export class ConversationRepository {
         return await prisma.conversation.findMany({
             where: { userId },
             include: {
-                message: {
+                messages: {
                     take: 1,
                     orderBy: { timestamp: 'desc'},
                 },
@@ -20,7 +20,7 @@ export class ConversationRepository {
         return await prisma.conversation.findUnique({
             where: { id },
             include: {
-                message: {
+                messages: {
                     orderBy: { timestamp: 'asc' },
                 },
             },
