@@ -1,12 +1,15 @@
 import express, { Request, Response } from "express";
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from "./swagger";
+import conversationRoutes from './routes/conversation.routes';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-    res.json({ message: "Server is running"} );
-});
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.listen(port, () => {});
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
