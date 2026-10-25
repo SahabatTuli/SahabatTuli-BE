@@ -25,7 +25,7 @@ const options: swaggerJSDoc.Options = {
     },
   },
   // Memindai seluruh anotasi JSDoc di dalam folder routes
-  apis: ['./src/routes/*.ts', './src/routes/**/*.ts'],
+  apis: ['./src/modules/**/*.ts'],
 };
 
 export const swaggerSpec = swaggerJSDoc(options);
