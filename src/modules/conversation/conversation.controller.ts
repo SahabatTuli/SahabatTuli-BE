@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { conversationService } from "../services/conversation.service";
-import { SenderType } from "../../generated/prisma/enums";
+import { conversationService } from "./conversation.service";
+import { SenderType } from "../../../generated/prisma/enums";
 
 export const getConversations = async (req: Request, res: Response) => {
     try {

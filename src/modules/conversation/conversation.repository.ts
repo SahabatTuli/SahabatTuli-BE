@@ -1,5 +1,5 @@
-import prisma from "../config/prisma";
-import { SenderType } from "../../generated/prisma/enums";
+import prisma from "../../config/prisma";
+import { SenderType } from "../../../generated/prisma/enums";
 import { timeStamp } from "node:console";
 
 export class ConversationRepository {

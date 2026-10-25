@@ -1,5 +1,5 @@
-import { conversationRepository } from "../repositories/conversation.repository";
-import { SenderType } from "../../generated/prisma/enums";
+import { conversationRepository } from "./conversation.repository";
+import { SenderType } from "../../../generated/prisma/enums";
 
 export class ConversationService {
     async getUserConversation(userId: string) {
